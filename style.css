@@ -1,14 +1,55 @@
+@font-face {
+    font-family: roboto;
+    src: url(./Roboto-Regular.ttf);
+}
 .container{
     display: grid;
     grid-template-columns: 30vw auto;
+    grid-template-rows: auto;
+}
+.sheader{
+    margin-left: .3em;
+    margin-top: .3em;
+}
+.sidebar{
+    background-color: #1992D4;
+    grid-row: 1/3;
+    color: #ffffff;
+    font-family: roboto;
 }
 .sidebar ul{
     list-style: none;
+    display: grid;
+    grid-template-rows: repeat(autofit minmax(30px, 1fr));
+    padding: 0;
+    margin-left: .3em;
+
 }
 .header{
     grid-row: 1/2;
     grid-column: 2/3;
+    background-color: #eeebeb;
+}
+.content{
+    grid-column: 2/3;
+    background-color: #E2E8F0;
 }
 .deck{
-    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+}
+.card{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 40% 1fr;
+    justify-items: center;
+}
+.cheader{
+    font-weight: bold;
+    grid-column: 1/3;
+}
+.ccontent{
+    font-size: 10pt;
+    text-align: left;
+
 }
