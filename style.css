@@ -4,9 +4,14 @@
 }
 .grid{display: grid;}
 .flex{display: flex;}
+body{
+    margin: 0;
+}
 .layout{
     grid-template-columns: 18% 1fr;
-    grid-template-rows: 10% 20% 170%;
+    grid-template-rows: 10% auto 1fr;
+    height: 100vh;
+    width: 100vw;
     font-family: roboto;
 }
 .sidebar{
@@ -25,7 +30,7 @@
 }
 .infospace{
     grid-column: 2/3;
-    grid-row: 2/3;
+    grid-row: 3/4;
 }
 .sidebarHeader{
     font-size: 18pt;
@@ -73,13 +78,17 @@
 }
 .hello{
     grid-template-columns: min-content 1fr;
-    grid-template-rows: repeat(2, 40%);
+    grid-template-rows: 1fr 1fr;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .hello span{
     grid-column: 1/2;
-    grid-row: 1/2;
-    font-size: 29pt;
+    grid-row: 1/3;
+    font-size: 28pt;
     margin-left: 1vw;
+    align-self: center;
+    justify-self: center;
 }
 .helloTop{
     grid-column: 2/3;
@@ -93,4 +102,5 @@
     flex-flow: row;
     align-items: center;
     margin-right: 1vw;
+    gap: 1vw;
 }
