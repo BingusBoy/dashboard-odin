@@ -1,5 +1,96 @@
+@font-face {
+    font-family: roboto;
+    src: url(./Roboto-Regular.ttf);
+}
 .grid{display: grid;}
 .flex{display: flex;}
+.layout{
+    grid-template-columns: 18% 1fr;
+    grid-template-rows: 10% 20% 170%;
+    font-family: roboto;
+}
+.sidebar{
+    grid-column: 1/2;
+    grid-row: 1/4;
+    background-color: lightblue;
+    color: white;
+    flex-flow: column;
+    gap: 6vh;
+}
+.topbar{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-content: space-between;
+    align-items: center;
+}
+.infospace{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
 .sidebarHeader{
+    font-size: 18pt;
+    flex-flow: row;
+    align-items: center;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+.sidebarHeader .dashboard{
+    font-size: 12pt;
+}
+.sidebar .buttonGroup{
+    flex-flow: column;
+    gap: 6%;
+}
+.sidebar .buttonGroup span{
+    margin-right: 6%;
+    margin-left: 3%;
+}
+.searchbar{
     font-size: 20pt;
+    flex-flow: row;
+    align-items: center;
+    align-content: center;
+}
+#search{
+    /* background-color:  rgb(219, 226, 236); */
+    border-radius: 14px;
+    width: 50vw;
+}
+.userbar{
+    font-size: 17pt;
+    align-items: center;
+    gap: .5vw;
+}
+.userbar .name{
+    font-size: 13pt;
+    font-weight: 700;
+}
+.herobar{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.hello{
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: repeat(2, 40%);
+}
+.hello span{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 29pt;
+    margin-left: 1vw;
+}
+.helloTop{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.helloBottom{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.herobar .buttonGroup{
+    flex-flow: row;
+    align-items: center;
+    margin-right: 1vw;
 }
