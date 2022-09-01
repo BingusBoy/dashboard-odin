@@ -4,10 +4,13 @@
 }
 .grid{display: grid;}
 .flex{display: flex;}
+body{margin: 0;}
 .layout{
-    grid-template-columns: 18% 1fr;
-    grid-template-rows: 10% 20% 170%;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: 5% auto 1fr;
     font-family: roboto;
+    width: 100vw;
+    height: 100vh;
 }
 .sidebar{
     grid-column: 1/2;
@@ -15,7 +18,7 @@
     background-color: lightblue;
     color: white;
     flex-flow: column;
-    gap: 6vh;
+    gap: 3vh;
 }
 .topbar{
     grid-column: 2/3;
@@ -25,25 +28,27 @@
 }
 .infospace{
     grid-column: 2/3;
-    grid-row: 2/3;
+    grid-row: 3/4;
 }
 .sidebarHeader{
-    font-size: 18pt;
+    font-size: clamp(1rem, 4vw, 3rem); 
     flex-flow: row;
     align-items: center;
     margin-left: 3%;
     margin-top: 3%;
 }
 .sidebarHeader .dashboard{
-    font-size: 12pt;
+    font-size: clamp(1rem, 2.9vw, 3rem); 
 }
 .sidebar .buttonGroup{
     flex-flow: column;
     gap: 6%;
+    font-size: clamp(1rem, 2.7vw, 3rem); 
 }
 .sidebar .buttonGroup span{
     margin-right: 6%;
     margin-left: 3%;
+    font-size: clamp(1rem, 2.7vw, 3rem); 
 }
 .searchbar{
     font-size: 20pt;
@@ -51,25 +56,33 @@
     align-items: center;
     align-content: center;
 }
+.searchbar span{
+    font-size: clamp(1rem, 3.6vw, 3rem); 
+}
 #search{
     /* background-color:  rgb(219, 226, 236); */
-    border-radius: 14px;
-    width: 50vw;
+    border-radius: 8px;
+    border: none;
+    background-color: lightgrey;
+    width: 48vw;
+    height: 2em;
 }
 .userbar{
-    font-size: 17pt;
+    font-size: clamp(.1rem, 2.9vw, 3rem); 
     align-items: center;
-    gap: .5vw;
+    gap: .8vw;
 }
 .userbar .name{
-    font-size: 13pt;
+    font-size: clamp(.1rem, 1.65vw, 2rem); 
     font-weight: 700;
+    white-space: nowrap;
 }
 .herobar{
     grid-row: 2/3;
     grid-column: 2/3;
     flex-flow: row;
     justify-content: space-between;
+    align-items: center;
 }
 .hello{
     grid-template-columns: min-content 1fr;
@@ -77,20 +90,36 @@
 }
 .hello span{
     grid-column: 1/2;
-    grid-row: 1/2;
-    font-size: 29pt;
-    margin-left: 1vw;
+    grid-row: 1/3;
+    font-size: clamp(1rem, 6vw, 4rem); 
+    /* font-size: 29pt; */
+    margin-left: .6vw;
+    justify-self: flex-end;
+    align-self: auto;
 }
 .helloTop{
     grid-column: 2/3;
     grid-row: 1/2;
+    align-self: flex-end;
+    font-size: clamp(1rem, 1.8vw, 2rem); 
 }
 .helloBottom{
     grid-column: 2/3;
     grid-row: 2/3;
+    font-size: clamp(.1rem, 2.6vw, 2rem); 
 }
 .herobar .buttonGroup{
     flex-flow: row;
     align-items: center;
     margin-right: 1vw;
+    gap: .3em;
+}
+.herobar .buttonGroup button {
+    width: 6vw;
+    height: 2.5em;
+    border-radius: 14px;
+    font-size: clamp(.1rem, 1.3vw, 2rem); 
+    background-color: lightblue;
+    color: white;
+    border: none;
 }
