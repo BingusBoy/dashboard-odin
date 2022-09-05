@@ -26,10 +26,6 @@ body{margin: 0;}
     justify-content: space-between;
     align-items: center;
 }
-.infospace{
-    grid-column: 2/3;
-    grid-row: 3/4;
-}
 .sidebarHeader{
     font-size: clamp(1rem, 4vw, 2.5rem); 
     flex-flow: row;
@@ -122,4 +118,28 @@ body{margin: 0;}
     background-color: lightblue;
     color: white;
     border: none;
+}
+.infospace{
+    grid-column: 2/3;
+    grid-row: 3/4;  
+    grid-template-columns: 65% 1fr;
+    grid-template-rows: 5% 23% 1fr;
+}
+.projectsHeader{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: flex-end;
+}
+.announcementsHeader{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: flex-end;
+}
+.trendingHeader{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+.deck{
+    grid-column: 1/2;
+    grid-row: 2/4;
 }
